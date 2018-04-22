@@ -6,28 +6,12 @@ import {
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting
 } from '@angular/platform-browser-dynamic/testing';
-import { AgmCoreModule } from '@agm/core';
-import { environment } from './environments/environment';
-import { MaterialModule } from './app/shared/modules/material.module';
-import { APP_BASE_HREF } from '@angular/common';
-import { NgModule } from '@angular/core';
 
 declare const require: any;
 
-@NgModule({
-  imports: [
-    MaterialModule,
-    AgmCoreModule.forRoot({
-      apiKey: environment.googleApiKey
-    })
-  ],
-  exports: [MaterialModule, AgmCoreModule],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
-})
-class TestModule {}
-
+// First, initialize the Angular testing environment.
 getTestBed().initTestEnvironment(
-  [BrowserDynamicTestingModule, TestModule],
+  BrowserDynamicTestingModule,
   platformBrowserDynamicTesting()
 );
 // Then we find all the tests.
