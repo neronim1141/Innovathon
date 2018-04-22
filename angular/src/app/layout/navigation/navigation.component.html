@@ -1,0 +1,21 @@
+<button mat-icon-button [matMenuTriggerFor]="menu">
+  <mat-icon>menu</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/">
+    <mat-icon>home</mat-icon>
+    <span>Strona główna</span>
+  </button>
+  <button mat-menu-item routerLink="slide">
+    <mat-icon>gamepad</mat-icon>
+    <span>Gra</span>
+  </button>
+  <button mat-menu-item routerLink="map">
+    <mat-icon>map</mat-icon>
+    <span>Mapa</span>
+  </button>
+  <button mat-menu-item routerLink="ranking">
+    <mat-icon>stars</mat-icon>
+    <span>Ranking</span>
+  </button>
+</mat-menu>
